@@ -1,0 +1,90 @@
+<!-- 
+
+<!DOCTYPE html> <html lang="tr"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <title>Doğum Günü Pastası</title> <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet"> <link rel="stylesheet
+
+pasted
+
+Dosyayı inceledim. Bu bir doğum günü pastası sayfası ve bir mesaj sayfası kodu içeriyor. Ancak gördüğüm kadarıyla mevcut kodda "Tıkla" butonuna basıldığında sayfa yönlendirmesi yapacak bir fonksiyon yok.
+
+Size bu sorunu çözmek için iki seçenek sunabilirim:
+
+Seçenek 1: Mevcut HTML/CSS/JS kodunu düzeltmek
+Mevcut kodunuzdaki "Tıkla" butonuna tıklama işlevi ekleyebilirim.
+
+Seçenek 2: Tek bir HTML dosyasında tüm özellikler
+Doğum günü pastası sayfasını ve mesaj sayfasını tek bir HTML dosyasında birleştirerek, mum söndükten sonra direkt mesajın gösterilmesini sağlayabilirim.
+
+Hangi seçeneği tercih edersiniz? Yoksa tamamen yeni bir tasarım mı istiyorsunuz?
+
+Ayrıca, "mesaj sayfası" dediğiniz içerik Next.js React komponenti olarak yazılmış. Eğer sadece HTML/CSS/JS ile çalışmak istiyorsanız, bu mesajı da düz HTML'e çevirmem gerekecek.
+
+Hangi yaklaşımı tercih ettiğinizi belirtirseniz, size tam çalışır bir çözüm hazırlayabilirim.
+
+
+
+
+butona tıkayınca bu attığım mesaj tasarımının aynısı şeklinde bir sayfaya yönlendir sadece html css ve js kullan
+
+
+Doğum Günü Pastası - Tam Sürüm
+Interactive artifact 
+
+
+
+koldarı ayrı ayrı sayfalarda ver
+
+
+Doğum Günü Pastası Sayfası
+Interactive artifact 
+
+
+
+koldarı html css ve js olacak şekilde ayrı sayfalalra ver
+
+
+index.html - Doğum Günü Pastası
+Code 
+
+style.css - Doğum Günü Pastası Stilleri
+Code  -->
+
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>İyi Ki Doğdun</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>✨ İyi ki Doğdun! ✨ <br><p class="info-text">Bir dilek tut ve muma üfle</p></h1>
+    <div class="cake-area">
+      <div class="cake">
+        <div class="plate"></div>
+        <div class="layer layer1"></div>
+        <div class="layer layer2"></div>
+        <div class="layer layer3"></div>
+        <div class="choco-top"></div>
+
+        <!-- Yeni mum (çizim tarzında, gülen yüzlü, iki katmanlı alevli) -->
+        <div class="candle" id="candle">
+          <div class="flame" id="flame">
+            <div class="flame-inner"></div>
+          </div>
+          <div class="wick"></div>
+          <div class="candle-body">
+            <div class="face">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

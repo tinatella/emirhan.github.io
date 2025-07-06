@@ -1,0 +1,233 @@
+body {
+  background: #fff7fc;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Marck Script', cursive, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Marck Script', cursive;
+  color: #8e44ad;
+  font-size: 2.5em;
+  margin: 0 0 30px;
+}
+
+.info-text {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #5a2e4a;
+  text-align: center;
+}
+
+.cake-area {
+  position: relative;
+  width: 330px;
+  height: 410px;
+}
+
+.cake {
+  position: absolute;
+  left: 50%;
+  top: 49px;
+  transform: translateX(-50%);
+  width: 290px;
+  height: 270px;
+}
+
+.plate {
+  position: absolute;
+  bottom: -5px;
+  width: 320px;
+  height: 55px;
+  background: linear-gradient(135deg, #b8e6e6 0%, #7dd3d3 50%, #5cbcbc 100%);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.3),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.15),
+    inset 0 4px 8px rgba(255, 255, 255, 0.4);
+  border: 2px solid #4a9999;
+}
+
+.plate::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 32px;
+  background: linear-gradient(135deg, #c9eded 0%, #9dd9d9 100%);
+  border-radius: 50%;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+/* Pastanın alt katmanını tabakla daha iyi birleştir */
+.layer1 { 
+  bottom: 38px; 
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.layer {
+  position: absolute;
+  width: 230px;
+  height: 60px;
+  background: #fff4d7;
+  border-radius: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2.5px solid #f2e5b3;
+}
+
+.layer1 { bottom: 24px; }
+.layer2 { bottom: 87px; }
+.layer3 { bottom: 150px; }
+
+.choco-top {
+  position: absolute;
+  bottom: 210px;
+  left: 50%;
+  width: 250px;
+  height: 30px;
+  background: #a0522d;
+  border-radius: 90px 90px 40px 40px / 40px 40px 30px 30px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* ----------- Yeni mum tasarımı ----------- */
+.candle {
+  position: absolute;
+  bottom: 227px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+.candle-body {
+  width: 24px;
+  height: 70px;
+  background: #fff9b1;
+  border: 2px solid #eee085;
+  border-radius: 5px;
+  position: relative;
+}
+
+.face {
+  position: absolute;
+  top: 18px;
+  left: 4px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eye {
+  width: 4px;
+  height: 6px;
+  background: #000;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.smile {
+  width: 12px;
+  height: 6px;
+  border-bottom: 2px solid #000;
+  border-radius: 50%;
+  margin-top: 3px;
+}
+
+.wick {
+  width: 2px;
+  height: 10px;
+  background: #333;
+  margin-top: -2px;
+}
+
+/* Alev */
+.flame {
+  width: 40px;
+  height: 65px;
+  background: radial-gradient(ellipse at center, #ffe066 40%, #ff9f43 70%, transparent 100%);
+  border-radius: 60% 60% 70% 60% / 80% 80% 40% 30%;
+  position: relative;
+  animation: flame-idle 1.5s infinite ease-in-out;
+  transform-origin: bottom center;
+  margin-bottom: -5px;
+}
+
+.flame-inner {
+  width: 24px;
+  height: 40px;
+  background: radial-gradient(ellipse at center, #fff3cd 40%, #ff6f00 80%, transparent 100%);
+  border-radius: 60% 70% 50% 50% / 80% 80% 40% 40%;
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  transform: translateX(-50%);
+}
+
+/* Alev hareketleri */
+@keyframes flame-idle {
+  0%   { transform: rotate(0deg) scaleY(1); }
+  50%  { transform: rotate(2deg) scaleY(1.05); }
+  100% { transform: rotate(-2deg) scaleY(1); }
+}
+
+@keyframes flame-wave {
+  0%   { transform: rotate(0deg) scaleY(1); }
+  30%  { transform: rotate(10deg) scaleY(1.2); }
+  60%  { transform: rotate(-12deg) scaleY(1.1); }
+  100% { transform: rotate(0deg) scaleY(1); }
+}
+
+.flame.wave {
+  animation: flame-wave 0.6s ease-out;
+}
+
+/* Tıkla butonu */
+.click-button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ff6b9d, #f06292);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+  margin: 20px 0;
+  display: block;
+}
+
+.click-button:hover {
+  background: linear-gradient(135deg, #f06292, #e91e63);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 157, 0.6);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
